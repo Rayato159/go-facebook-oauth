@@ -19,9 +19,14 @@ Logout(userAccessToken string) (*models.UserLogoutRes, error)
 ```
 
 <h2>Quickstart</h2>
-<p>This code below is to redirect, callback, and get user's data.</p>
 
-<p>***You can use Ngrok to put localhost on the internet for test.</p>
+<h3>Install the package</h3>
+
+```bash
+go get github.com/Rayato159/go-facebook-oauth
+```
+
+<p>This code below is to redirect, callback, and get user's data.</p>
 
 ```go
 package main
@@ -31,11 +36,11 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/Rayato159/go-facebook-oauth/src"
+	"github.com/Rayato159/go-facebook-oauth"
 )
 
 func main() {
-	oauth := src.NewGoFacebookOauth(
+	oauth := fboauth.NewGoFacebookOauth(
 		"15.0",
 		"callback-url",
 		"app-id",
