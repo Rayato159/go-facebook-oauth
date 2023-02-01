@@ -8,7 +8,20 @@
 <h2>Callback</h2>
 <img src="./screenshots/callback_flow.png">
 
+<h2>Services List</h2>
+<p>For permission or fields you can see in official docs <a href="https://developers.facebook.com/docs/graph-api/reference/user/">https://developers.facebook.com/docs/graph-api/reference/user/</a></p>
+
+```go
+GetCallbackUrl(state string, permissions ...UserPermission) (string, error)
+GetAccessToken(code string) (*models.UserAccessToken, error)
+GetUserData(userAccessToken string, fields ...UserFields) (*models.UserProfile, error)
+Logout(userAccessToken string) (*models.UserLogoutRes, error)
+```
+
 <h2>Quickstart</h2>
+<p>This code below is to redirect, callback, and get user's data.</p>
+
+<p>***You can use Ngrok to put localhost on the internet for test.</p>
 
 ```go
 package main
@@ -79,3 +92,13 @@ func main() {
 	}
 }
 ```
+
+<h2>Usage</h2>
+<ol>
+	<li>Create the Facebook Login app</li>
+	<li>Setup the Ngrok url to put localhost to internet</li>
+	<li>Setup the callback url (http://your-server-host/callback) on your Facebook Login app</li>
+	<li>Redirect to http://your-server-host/login</li>
+	<li>Authorize the Facebook app</li>
+	<li>Success!</li>
+</ol>
