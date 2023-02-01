@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Rayato159/go-facebook-oauth/models"
-	"github.com/Rayato159/go-facebook-oauth/utils"
+	"github.com/Rayato159/rayato-go-facebook-oauth/models"
+	"github.com/Rayato159/rayato-go-facebook-oauth/utils"
 )
 
 type errRes struct {
