@@ -1,4 +1,4 @@
-package src
+package fboauth
 
 import (
 	"encoding/json"
